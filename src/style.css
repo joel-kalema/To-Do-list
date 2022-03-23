@@ -39,6 +39,18 @@ form {
   padding-right: 15px;
 }
 
+.list {
+  font-size: 18px;
+  padding: 10px 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list:hover {
+  background-color: rgb(221, 221, 221);
+}
+
 form i {
   width: 3%;
   margin-left: 0;
@@ -61,18 +73,6 @@ input {
 
 .list:nth-child(even):hover {
   background-color: rgb(192, 192, 192);
-}
-
-.list:hover {
-  background-color: rgb(221, 221, 221);
-}
-
-.list {
-  font-size: 18px;
-  padding: 10px 20px;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
 }
 
 .list i {
@@ -109,6 +109,5 @@ button:hover {
 @media only screen and (max-width: 820px) {
   section {
     width: 90%;
-    
   }
 }
