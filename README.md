@@ -84,7 +84,7 @@ interface](https://webpack.js.org/plugins/). Most of the features
 within webpack itself use this plugin interface. This makes webpack very
 ## Authors
 
-👤 👤 **JOEL KALEMA**
+👤 **JOEL KALEMA**
 
 - GitHub: [@joel-kalema](https://github.com/joel-kalema)
 - Twitter: [@JoelJklm](https://www.linkedin.com/in/joel-kalema-30518a230/)
