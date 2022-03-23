@@ -6,9 +6,17 @@
 
 ## Built With
 
+<<<<<<< HEAD
 - Major languages
 - Frameworks
 - Technologies used
+=======
+- Html
+- Csss
+- Js
+- Technologies used:
+   webpack
+>>>>>>> c2555e0b461a7953bcce0102ae245b6f7b8d442f
 
 ## Getting Started
 
@@ -31,6 +39,14 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **JOEL KALEMA**
 
+<<<<<<< HEAD
+=======
+
+## Authors
+
+👤 👤 **JOEL KALEMA**
+
+>>>>>>> c2555e0b461a7953bcce0102ae245b6f7b8d442f
 - GitHub: [@joel-kalema](https://github.com/joel-kalema)
 - Twitter: [@JoelJklm](https://www.linkedin.com/in/joel-kalema-30518a230/)
 - LinkedIn: [joel kalema](https://twitter.com/JoelJklm)
