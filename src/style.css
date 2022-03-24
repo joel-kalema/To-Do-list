@@ -48,8 +48,22 @@ form {
   justify-content: space-between;
 }
 
+form button {
+  width: 10%;
+  background-color: #fff;
+}
+
+form button:hover {
+  background-color: #fff;
+}
+
+.list button {
+  width: 10%;
+  background-color: #fff;
+}
+
 form i {
-  width: 3%;
+  width: 1%;
   margin-left: 0;
 }
 
