@@ -40,15 +40,12 @@ form {
 }
 
 .list {
+  background-color: #fff;
   font-size: 18px;
   padding: 10px 20px;
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
-
-.list:hover {
-  background-color: rgb(221, 221, 221);
 }
 
 form i {
@@ -67,14 +64,6 @@ input {
   font-style: italic;
 }
 
-.list:nth-child(even) {
-  background-color: rgb(221, 221, 221);
-}
-
-.list:nth-child(even):hover {
-  background-color: rgb(192, 192, 192);
-}
-
 .list i {
   margin-right: 0;
   margin-right: 10px;
@@ -86,10 +75,6 @@ input {
 
 .text-area {
   width: 90%;
-}
-
-.delete {
-  display: none;
 }
 
 button {

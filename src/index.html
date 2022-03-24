@@ -22,12 +22,15 @@
       </header>
       <form class="form">
         <input
+          autocomplete="off"
           type="text"
           id="title"
           class="inputs"
           placeholder="Added to your list..."
         />
-        <i class="fa fa-sign-in add" aria-hidden="true"></i>
+        <button type="submit" class="add">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </button>
       </form>
       <div class="lists"></div>
       <button>Clear all completed</button>

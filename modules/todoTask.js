@@ -14,18 +14,16 @@ export default class TodoList {
     this.tasks.push(task);
   }
 
-  removeBook(id) {
-    this.tasks.forEach((task) => {
-      if (task.id === id) {
-        this.tasks.splice(this.tasks.indexOf(task), 1);
-      }
+  removeList(id) {
+    this.tasks = this.tasks.filter((task) => {
+      if (task.id !== id) return task;
     });
   }
 
   displayToDO(list) {
     list.innerHTML = '';
     this.tasks.forEach((task) => {
-      const li = `<div class="list">
+      const li = `<div id="${task.id}" class="list">
       <input
         type="checkbox"
         id="task"
@@ -33,9 +31,11 @@ export default class TodoList {
         value="task"
         class="checkbox"
       />
-      <div class="text-area">${task.description}</div>
-      <i class="fa fa-trash-o delete" aria-hidden="true"></i>
-      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      <input
+        type="text" id="text-area" name="task" value="${task.description}" />
+      <button class="delete">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </button>
     </div>`;
       list.innerHTML += li;
     });
@@ -46,8 +46,9 @@ export default class TodoList {
     localStorage.setItem('tasks', formData);
   };
 
-  getStorage = (key) => {
-    this.tasks = JSON.parse(localStorage.getItem(key));
-    return this.tasks;
+  getStorage = () => {
+    if (localStorage.getItem('tasks')) {
+      this.tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
   };
 }
