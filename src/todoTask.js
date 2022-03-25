@@ -14,19 +14,13 @@ export default class TodoList {
     this.tasks.push(task);
   }
 
-  removeList(id) {
-    this.tasks = this.tasks.filter((task) => {
-      if (task.id !== id) return task;
+  removeList = (id) => {
+    this.tasks.forEach((task) => {
+      if (task.id === id) {
+        this.tasks.splice(this.tasks.indexOf(task), 1);
+      }
     });
   }
-
-  // removeList = (id) => {
-  //   this.tasks.forEach((task) => {
-  //     if (task.id === id) {
-  //       this.books.splice(this.books.indexOf(task), 1);
-  //     }
-  //   });
-  // }
 
   removeAll = () => {
     this.tasks = [];
