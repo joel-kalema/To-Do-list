@@ -14,18 +14,22 @@ export default class TodoList {
     this.tasks.push(task);
   }
 
-  // removeList(id) {
-  //   this.tasks = this.tasks.filter((task) => {
-  //     if (task.id !== id) return task;
+  removeList(id) {
+    this.tasks = this.tasks.filter((task) => {
+      if (task.id !== id) return task;
+    });
+  }
+
+  // removeList = (id) => {
+  //   this.tasks.forEach((task) => {
+  //     if (task.id === id) {
+  //       this.books.splice(this.books.indexOf(task), 1);
+  //     }
   //   });
   // }
 
-  removeList = (id) => {
-    this.tasks.forEach((task) => {
-      if (task.id === id) {
-        this.books.splice(this.books.indexOf(task), 1);
-      }
-    });
+  removeAll = () => {
+    this.tasks = [];
   }
 
   displayToDo(list) {
@@ -41,9 +45,7 @@ export default class TodoList {
       />
       <input
         type="text" id="text-area" name="task" value="${task.description}" />
-      <button class="delete">
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      </button>
+      <button class="delete">Delete</button>
     </div>`;
       list.innerHTML += li;
     });
