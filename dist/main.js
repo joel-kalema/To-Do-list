@@ -129,6 +129,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/TodoTask.js":
+/*!*************************!*\
+  !*** ./src/TodoTask.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ TodoList)\n/* harmony export */ });\nclass TodoList {\n  constructor() {\n    this.tasks = [];\n  }\n\n  addTask(description) {\n    const completed = false;\n    const id = this.tasks.length + 1;\n    const task = {\n      id,\n      description,\n      completed,\n    };\n    this.tasks.push(task);\n  }\n\n  removeList = (id) => {\n    this.tasks.forEach((task) => {\n      if (task.id === id) {\n        this.tasks.splice(this.tasks.indexOf(task), 1);\n      }\n    });\n  }\n\n  removeAll = () => {\n    this.tasks = [];\n  }\n\n  displayToDo(list) {\n    list.innerHTML = '';\n    this.tasks.forEach((task) => {\n      const li = `<div id=\"${task.id}\" class=\"list\">\n      <input\n        type=\"checkbox\"\n        id=\"task\"\n        name=\"task\"\n        value=\"task\"\n        class=\"checkbox\"\n      />\n      <input\n        type=\"text\" id=\"text-area\" name=\"task\" value=\"${task.description}\" />\n      <button class=\"delete\">Delete</button>\n    </div>`;\n      list.innerHTML += li;\n    });\n  }\n\n  setStorage = () => {\n    const formData = JSON.stringify(this.tasks);\n    localStorage.setItem('tasks', formData);\n  };\n\n  getStorage = () => {\n    if (localStorage.getItem('tasks')) {\n      this.tasks = JSON.parse(localStorage.getItem('tasks'));\n    }\n  };\n}\n\n//# sourceURL=webpack://webpack-templet/./src/TodoTask.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -136,18 +147,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _todoTask_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./todoTask.js */ \"./src/todoTask.js\");\n\n\n\n\nconst list = document.querySelector('.lists');\nconst addTodo = document.querySelector('.form');\nconst descript = document.querySelector('#title');\nconst remoTasks = document.querySelector('.remouveAll');\n\nconst todoList = new _todoTask_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n\naddTodo.addEventListener('submit', (e) => {\n  e.preventDefault();\n  if (descript.value.trim()) {\n    todoList.addTask(descript.value);\n    todoList.setStorage();\n    todoList.displayToDo(list);\n    addTodo.reset();\n  }\n});\n\nremoTasks.addEventListener('click', () => {\n  todoList.removeAll();\n  todoList.setStorage();\n  todoList.displayToDo(list);\n});\n\ndocument.addEventListener('click', (e) => {\n  if (e.target && e.target.classList.contains('delete')) {\n    const id = parseInt(e.target.parentElement.id, 10);\n    todoList.removeList(id);\n    todoList.setStorage();\n    todoList.displayToDo(list);\n  }\n});\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  todoList.getStorage();\n  todoList.displayToDo(list);\n});\n\n//# sourceURL=webpack://webpack-templet/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/todoTask.js":
-/*!*************************!*\
-  !*** ./src/todoTask.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ TodoList)\n/* harmony export */ });\nclass TodoList {\n  constructor() {\n    this.tasks = [];\n  }\n\n  addTask(description) {\n    const completed = false;\n    const id = this.tasks.length + 1;\n    const task = {\n      id,\n      description,\n      completed,\n    };\n    this.tasks.push(task);\n  }\n\n  removeList = (id) => {\n    this.tasks.forEach((task) => {\n      if (task.id === id) {\n        this.tasks.splice(this.tasks.indexOf(task), 1);\n      }\n    });\n  }\n\n  removeAll = () => {\n    this.tasks = [];\n  }\n\n  displayToDo(list) {\n    list.innerHTML = '';\n    this.tasks.forEach((task) => {\n      const li = `<div id=\"${task.id}\" class=\"list\">\n      <input\n        type=\"checkbox\"\n        id=\"task\"\n        name=\"task\"\n        value=\"task\"\n        class=\"checkbox\"\n      />\n      <input\n        type=\"text\" id=\"text-area\" name=\"task\" value=\"${task.description}\" />\n      <button class=\"delete\">Delete</button>\n    </div>`;\n      list.innerHTML += li;\n    });\n  }\n\n  setStorage = () => {\n    const formData = JSON.stringify(this.tasks);\n    localStorage.setItem('tasks', formData);\n  };\n\n  getStorage = () => {\n    if (localStorage.getItem('tasks')) {\n      this.tasks = JSON.parse(localStorage.getItem('tasks'));\n    }\n  };\n}\n\n//# sourceURL=webpack://webpack-templet/./src/todoTask.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _TodoTask_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TodoTask.js */ \"./src/TodoTask.js\");\n\n\n\n\nconst list = document.querySelector('.lists');\nconst addTodo = document.querySelector('.form');\nconst descript = document.querySelector('#title');\nconst remoTasks = document.querySelector('.remouveAll');\n\nconst todoList = new _TodoTask_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n\naddTodo.addEventListener('submit', (e) => {\n  e.preventDefault();\n  if (descript.value.trim()) {\n    todoList.addTask(descript.value);\n    todoList.setStorage();\n    todoList.displayToDo(list);\n    addTodo.reset();\n  }\n});\n\nremoTasks.addEventListener('click', () => {\n  todoList.removeAll();\n  todoList.setStorage();\n  todoList.displayToDo(list);\n});\n\ndocument.addEventListener('click', (e) => {\n  if (e.target && e.target.classList.contains('delete')) {\n    const id = parseInt(e.target.parentElement.id, 10);\n    todoList.removeList(id);\n    todoList.setStorage();\n    todoList.displayToDo(list);\n  }\n});\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  todoList.getStorage();\n  todoList.displayToDo(list);\n});\n\n//# sourceURL=webpack://webpack-templet/./src/index.js?");
 
 /***/ })
 

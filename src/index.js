@@ -1,6 +1,6 @@
 import 'lodash';
 import './style.css';
-import TodoList from './todoTask.js';
+import TodoList from './TodoTask.js';
 
 const list = document.querySelector('.lists');
 const addTodo = document.querySelector('.form');
