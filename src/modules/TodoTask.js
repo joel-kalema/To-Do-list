@@ -22,26 +22,55 @@ export default class TodoList {
     });
   }
 
-  removeAll = () => {
-    this.tasks = [];
-  }
-
   displayToDo(list) {
     list.innerHTML = '';
     this.tasks.forEach((task) => {
       const li = `<div id="${task.id}" class="list">
       <input
         type="checkbox"
-        id="task"
+        id="${task.id}"
         name="task"
         value="task"
         class="checkbox"
       />
       <input
-        type="text" id="text-area" name="task" value="${task.description}" />
+        type="text" id="${task.id}" class="text-area" name="task" value="${task.description}" />
       <button class="delete">Delete</button>
     </div>`;
       list.innerHTML += li;
+    });
+    const checkedbox = document.querySelectorAll('.checkbox');
+    checkedbox.forEach((check) => {
+      check.addEventListener('change', () => {
+        if (check.checked) {
+          check.nextElementSibling.style.textDecoration = 'line-through';
+        } else {
+          check.nextElementSibling.style.textDecoration = 'none';
+        }
+      });
+    });
+
+    const textArea = document.querySelectorAll('.text-area');
+
+    textArea.forEach((area) => {
+      area.addEventListener('change', () => {
+        const result = this.tasks.filter((task) => task.id === Number(area.id));
+        this.tasks[result[0].id - 1].description = area.value;
+      });
+    });
+  }
+
+  resetIndex = () => {
+    let initialIndex = 1;
+    this.tasks.forEach((task) => {
+      task.id = initialIndex;
+      initialIndex += 1;
+    });
+  }
+
+  showCompleted = () => {
+    this.tasks.forEach((task) => {
+      task.completed = true;
     });
   }
 

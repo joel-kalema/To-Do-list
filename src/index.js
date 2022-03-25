@@ -5,7 +5,7 @@ import TodoList from './modules/TodoTask.js';
 const list = document.querySelector('.lists');
 const addTodo = document.querySelector('.form');
 const descript = document.querySelector('#title');
-const remoTasks = document.querySelector('.remouveAll');
+// const remoTasks = document.querySelector('.remouveAll');
 
 const todoList = new TodoList();
 
@@ -14,21 +14,17 @@ addTodo.addEventListener('submit', (e) => {
   if (descript.value.trim()) {
     todoList.addTask(descript.value);
     todoList.setStorage();
+    todoList.resetIndex();
     todoList.displayToDo(list);
     addTodo.reset();
   }
-});
-
-remoTasks.addEventListener('click', () => {
-  todoList.removeAll();
-  todoList.setStorage();
-  todoList.displayToDo(list);
 });
 
 document.addEventListener('click', (e) => {
   if (e.target && e.target.classList.contains('delete')) {
     const id = parseInt(e.target.parentElement.id, 10);
     todoList.removeList(id);
+    todoList.resetIndex();
     todoList.setStorage();
     todoList.displayToDo(list);
   }

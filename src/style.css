@@ -40,8 +40,8 @@ form {
   padding-right: 15px;
 }
 
-#text-area {
-  font-style: normal;
+.change {
+  background-color: blue;
 }
 
 .list {
@@ -116,10 +116,15 @@ input {
 
 .text-area {
   width: 90%;
+  font-style: normal;
 }
 
 @media only screen and (max-width: 820px) {
   section {
     width: 90%;
+  }
+
+  body {
+    padding: 15px;
   }
 }
