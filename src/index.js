@@ -10,7 +10,7 @@ const remoTasks = document.querySelector('.remouveAll');
 const todoList = new TodoList();
 
 remoTasks.addEventListener('click', () => {
-  todoList.cleanCplited();
+  todoList.cleanCompleted();
   todoList.setStorage();
   todoList.displayToDo(list);
 });
