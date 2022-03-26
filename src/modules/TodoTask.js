@@ -31,6 +31,7 @@ export default class TodoList {
         id="${task.id}"
         name="task"
         value="task"
+        ${task.completed ? 'checked' : ''}
         class="checkbox"
       />
       <input
@@ -39,23 +40,38 @@ export default class TodoList {
     </div>`;
       list.innerHTML += li;
     });
-    const checkedbox = document.querySelectorAll('.checkbox');
-    checkedbox.forEach((check) => {
+    const checkbox = document.querySelectorAll('.checkbox');
+
+    checkbox.forEach((check) => {
       check.addEventListener('change', () => {
         if (check.checked) {
-          check.nextElementSibling.style.textDecoration = 'line-through';
+          check.parentElement.classList.add('complete');
+          this.tasks = this.tasks.map((task) => {
+            if (task.id === parseInt(check.parentElement.id, 10)) {
+              task.completed = check.checked;
+            }
+            return task;
+          });
+          this.setStorage();
         } else {
-          check.nextElementSibling.style.textDecoration = 'none';
+          check.parentElement.classList.remove('complete');
+          this.tasks = this.tasks.map((task) => {
+            if (task.id === parseInt(check.parentElement.id, 10)) {
+              task.completed = false;
+            }
+            return task;
+          });
+          this.setStorage();
         }
       });
     });
 
     const textArea = document.querySelectorAll('.text-area');
-
     textArea.forEach((area) => {
       area.addEventListener('change', () => {
         const result = this.tasks.filter((task) => task.id === Number(area.id));
         this.tasks[result[0].id - 1].description = area.value;
+        this.setStorage();
       });
     });
   }
@@ -72,6 +88,10 @@ export default class TodoList {
     this.tasks.forEach((task) => {
       task.completed = true;
     });
+  }
+
+  cleanCplited = () => {
+    this.tasks = this.tasks.filter((task) => task.completed === false);
   }
 
   setStorage = () => {
