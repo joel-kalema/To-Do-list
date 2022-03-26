@@ -1,41 +1,42 @@
 import 'lodash';
 import './style.css';
+import TodoList from './modules/TodoTask.js';
 
-const listsData = [
-  {
-    description: 'start to learn',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'start to learn',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'start to learn',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'start to learn',
-    completed: false,
-    index: 3,
-  },
-];
 const list = document.querySelector('.lists');
+const addTodo = document.querySelector('.form');
+const descript = document.querySelector('#title');
+const remoTasks = document.querySelector('.remouveAll');
 
-listsData.forEach((data) => {
-  list.innerHTML += `<div class="list">
-  <input
-    type="checkbox"
-    id="task"
-    name="task"
-    value="task"
-    class="checkbox"
-  />
-  <div class="text-area">${data.description}</div>
-  <i class="fa fa-trash-o delete" aria-hidden="true"></i>
-  <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-</div>`;
+const todoList = new TodoList();
+
+remoTasks.addEventListener('click', () => {
+  todoList.cleanCplited();
+  todoList.setStorage();
+  todoList.displayToDo(list);
+});
+
+addTodo.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (descript.value.trim()) {
+    todoList.addTask(descript.value);
+    todoList.setStorage();
+    todoList.resetIndex();
+    todoList.displayToDo(list);
+    addTodo.reset();
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.classList.contains('delete')) {
+    const id = parseInt(e.target.parentElement.id, 10);
+    todoList.removeList(id);
+    todoList.resetIndex();
+    todoList.setStorage();
+    todoList.displayToDo(list);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  todoList.getStorage();
+  todoList.displayToDo(list);
 });
