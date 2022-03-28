@@ -84,6 +84,8 @@ within webpack itself use this plugin interface. This makes webpack very
 
 [Mobile version screeshot](.scr/gh-pages.jpg)
 
+![Mobile version screeshot](gh-pages.jpg)
+
 [live](https://joel-kalema.github.io/To-Do-list/dist/index.html)
 
 ## Authors
