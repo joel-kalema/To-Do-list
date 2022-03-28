@@ -82,7 +82,7 @@ within webpack itself use this plugin interface. This makes webpack very
 
 ## live
 
-[live](https://joel-kalema.github.io/To-Do-list/dist/index.html)
+[live](https://joel-kalema.github.io/To-Do-list/)
 
 ## Authors
 
