@@ -1,94 +1,56 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-
-# To-Do-list
+# Project Name
 
 > Description the project.
 
 
 ## Built With
 
-- Html
-- Csss
-- Js
-- Technologies used:
-   webpack
+- Major languages
+- Frameworks
+- Technologies used
+
+## Live Demo (if available)
+
+[Live Demo Link](https://livedemo.com)
+
 
 ## Getting Started
 
-<h1>webpack</h1>
-  <p>
-    Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
-  </p>
-</div>
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
-## Table of Contents
 
-1. [Install](#install)
-2. [Introduction](#introduction)
-3. [Concepts](#concepts)
-4. [Contributing](#contributing)
-5. [Support](#support)
-6. [Core Team](#core-team)
-7. [Sponsoring](#sponsoring)
-8. [Premium Partners](#premium-partners)
-9. [Other Backers and Sponsors](#other-backers-and-sponsors)
-10. [Gold Sponsors](#gold-sponsors)
-11. [Silver Sponsors](#silver-sponsors)
-12. [Bronze Sponsors](#bronze-sponsors)
-13. [Backers](#backers)
-14. [Special Thanks](#special-thanks-to)
+To get a local copy up and running follow these simple example steps.
 
-<h2 align="center">Install</h2>
+### Prerequisites
 
-Install with npm:
+### Setup
 
-```bash
-npm install --save-dev webpack
-```
+### Install
 
-Install with yarn:
+### Usage
 
-```bash
-yarn add webpack --dev
-```
+### Run tests
 
-<h2 align="center">Introduction</h2>
+### Deployment
 
-Webpack is a bundler for modules. The main purpose is to bundle JavaScript
-files for usage in a browser, yet it is also capable of transforming, bundling,
-or packaging just about any resource or asset.
 
-**TL;DR**
 
-- Bundles [ES Modules](https://www.2ality.com/2014/09/es6-modules-final.html), [CommonJS](http://wiki.commonjs.org/), and [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) modules (even combined).
-- Can create a single bundle or multiple chunks that are asynchronously loaded at runtime (to reduce initial loading time).
-- Dependencies are resolved during compilation, reducing the runtime size.
-- Loaders can preprocess files while compiling, e.g. TypeScript to JavaScript, Handlebars strings to compiled functions, images to Base64, etc.
-- Highly modular plugin system to do whatever else your application requires.
-
-### Get Started
-
-Check out webpack's quick [**Get Started**](https://webpack.js.org/guides/getting-started) guide and the [other guides](https://webpack.js.org/guides/).
-
-### Browser Compatibility
-
-Webpack supports all browsers that are [ES5-compliant](https://kangax.github.io/compat-table/es5/) (IE8 and below are not supported).
-Webpack also needs `Promise` for `import()` and `require.ensure()`. If you want to support older browsers, you will need to [load a polyfill](https://webpack.js.org/guides/shimming/) before using these expressions.
-
-<h2 align="center">Concepts</h2>
-
-### [Plugins](https://webpack.js.org/plugins/)
-
-Webpack has a [rich plugin
-interface](https://webpack.js.org/plugins/). Most of the features
-within webpack itself use this plugin interface. This makes webpack very
 ## Authors
 
-👤 **JOEL KALEMA**
+👤 **Author1**
 
-- GitHub: [@joel-kalema](https://github.com/joel-kalema)
-- Twitter: [@JoelJklm](https://www.linkedin.com/in/joel-kalema-30518a230/)
-- LinkedIn: [joel kalema](https://twitter.com/JoelJklm)
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 

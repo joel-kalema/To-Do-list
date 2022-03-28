@@ -9,15 +9,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/index.html'
     }),
   ],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/webpack-demo/',
     clean: true,
-
   },
   module: {
     rules: [
