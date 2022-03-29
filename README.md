@@ -82,7 +82,7 @@ within webpack itself use this plugin interface. This makes webpack very
 
 ## live
 
-[Mobile version screeshot](gh-pages.jpg)
+![gh-pages](https://user-images.githubusercontent.com/57408419/160555220-8a6826dc-caa9-4a84-9bc6-329497b76105.jpg)
 
 [live](https://joel-kalema.github.io/To-Do-list/)
 
