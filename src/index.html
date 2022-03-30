@@ -17,20 +17,23 @@
   <body>
     <section>
       <header>
-        <h1>Today's to do</h1>
+        <h1>Today's To Do</h1>
         <i class="fa fa-refresh" aria-hidden="true"></i>
       </header>
       <form class="form">
         <input
+          autocomplete="off"
           type="text"
           id="title"
           class="inputs"
           placeholder="Added to your list..."
         />
-        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        <button type="submit" class="add">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </button>
       </form>
       <div class="lists"></div>
-      <button>Clear all completed</button>
+      <button class="remouveAll">Clear all completed</button>
     </section>
   </body>
 </html>
