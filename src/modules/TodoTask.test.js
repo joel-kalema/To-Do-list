@@ -12,8 +12,9 @@ describe('my TodoList class ', () => {
   });
   
   test("remove a task", () => {
+    kk.addTask("add the task");
     let lengthArry = kk.tasks.length;
-    kk.removeTask(1);
+    kk.removeList(1);
     expect(kk.tasks).toHaveLength(--lengthArry);
   });
 });
