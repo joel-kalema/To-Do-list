@@ -3,7 +3,7 @@ export default class TodoList {
     this.tasks = [];
   }
 
-  addTask(description) {
+  addTask = (description) => {
     const completed = false;
     const id = this.tasks.length + 1;
     const task = {
