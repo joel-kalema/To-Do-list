@@ -1,7 +1,8 @@
 
-import TodoList from 'TodoTask.js';
+import TodoList from './TodoTask.js';
 
-// const TodoList = require('./TodoTask.js');
+const kk = new TodoList();
 
-console.log(TodoList);
-
+test("addTask method adds task to the list of tasks", () => {
+  expect(kk.addTask("Added the task")).toBe();
+});
