@@ -1,8 +1,13 @@
-
 import TodoList from './TodoTask.js';
 
-const kk = new TodoList();
-
-test("addTask method adds task to the list of tasks", () => {
-  expect(kk.addTask("Added the task")).toBe();
+describe('my TodoList class ', () => {
+  let kk;
+  beforeEach(() => {
+    kk = new TodoList();
+  })
+  test("add a new task", () => {
+    let lengthArry = kk.tasks.length;
+    kk.addTask("add the task");
+    expect(kk.tasks).toHaveLength(++lengthArry);
+  });
 });
