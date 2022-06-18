@@ -1,6 +1,6 @@
 # To-Do-list
 
-> t’s a list of tasks you need to complete or things that you want to do. One of the most important reasons you should use a to do list is that it will help you stay organised.
+> T’s a list of tasks you need to complete or things that you want to do. One of the most important reasons you should use a to do list is that it will help you stay organised.
 
 ## Built With
 
