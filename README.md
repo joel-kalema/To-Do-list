@@ -17,13 +17,7 @@
 
 ## Getting Started
 
-<h1>webpack</h1>
-  <p>
-    Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
-  </p>
-</div>
-
-<h2 align="center">Install</h2>
+<h2>Install</h2>
 
 Install with npm:
 
@@ -37,14 +31,33 @@ Install with yarn:
 yarn add webpack --dev
 ```
 
-### Get Started
+<h2>Concepts</h2>
 
-Check out webpack's quick [**Get Started**](https://webpack.js.org/guides/getting-started) guide and the [other guides](https://webpack.js.org/guides/).
+### Prerequisites
 
-### Browser Compatibility
+```
+node and npm
+```
 
-Webpack supports all browsers that are [ES5-compliant](https://kangax.github.io/compat-table/es5/) (IE8 and below are not supported).
-Webpack also needs `Promise` for `import()` and `require.ensure()`. If you want to support older browsers, you will need to [load a polyfill](https://webpack.js.org/guides/shimming/) before using these expressions.
+### Setup
+
+```
+- clone the repo
+- cd into it
+- npm install
+```
+
+### Install
+
+```
+open the html file
+```
+
+### Usage
+
+```
+navigate through the pages to see different contents
+```
 
 ## Authors
 
