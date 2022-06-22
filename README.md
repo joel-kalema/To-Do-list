@@ -17,8 +17,6 @@
 
 ## Getting Started
 
-<h2>Install</h2>
-
 Install with npm:
 
 ```bash
