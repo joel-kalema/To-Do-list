@@ -1,62 +1,65 @@
 # To-Do-list
 
-> T’s a list of tasks you need to complete or things that you want to do. One of the most important reasons you should use a to do list is that it will help you stay organised.
+> "To-do list" is a tool created to help you orginize your daily activities by keeping them listed that you can consult whenever you want, with a feature of marking them as complete and drag & drop. I'm building this To-do list with Javascript (ES6) and Webpack.
 
 ## Built With
 
 - Html
 - Csss
 - Js
-- Technologies used:
-  webpack, Git, Github
+- webpack
+- npm
   
 
 ![gh-pages](https://user-images.githubusercontent.com/57408419/160555220-8a6826dc-caa9-4a84-9bc6-329497b76105.jpg)
 
-## [live](https://joel-kalema.github.io/To-Do-list/)
+## Live demo
+
+ click [here](https://joel-kalema.github.io/To-Do-list/)!
 
 ## Getting Started
 
-Install with npm:
+You can have a copy of this repo run on your local machine by just directly cloning it.
 
-```bash
-npm install --save-dev webpack
-```
+To get a local copy up and running follow these simple example steps.
+1. Download the `Zip` or `(git clone)[https://github.com/GedeonTS/To_Do_List]`
+2. `cd To_Do_List`
+3. Then open in your browser by using `live server`
 
-Install with yarn:
+## Test
 
-```bash
-yarn add webpack --dev
-```
+For tracking linter errors locally you need to follow these steps:
 
-<h2>Concepts</h2>
+- After cloning the project you need to run this command
+  > npm install
+   `This command will download all the dependencies of the project`
+
+- For tracking the linter errors in HTML file run:
+  > npx hint .
+
+- For tracking the linter errors in CSS file run:
+  > npx stylelint "**/*.{css,scss}"
+
+  - And For tracking the linter errors in JavaScript file run:
+  > npx eslint .
 
 ### Prerequisites
 
-```
-node and npm
-```
+- Node.js
+- npm
+- vscode(or else)
 
-### Setup
+To get the output of our project make sure you have google Chrome, Mozila or any other browser installed.
 
-```
-- clone the repo
-- cd into it
-- npm install
-```
+### Install 
 
-### Install
+> In order to install this project please go through the following steps:
 
-```
-open the html file
-```
-
-### Usage
-
-```
-navigate through the pages to see different contents
-```
-
+1. - [ ] Open the `Terminal`
+2. - [ ] Navigate to the directory where you want to add this repository
+3. - [ ] Run `git clone https://github.com/GedeonTS/To_Do_List.git`
+4. - [ ] Run `npm install` to install the necessary modules
+5. - [ ] Run `npm start`
 ## Authors
 
 👤 **JOEL KALEMA**
