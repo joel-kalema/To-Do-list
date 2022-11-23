@@ -6,7 +6,7 @@
 
 - html
 - css
-- Js
+- js
 - webpack
 - npm
   
