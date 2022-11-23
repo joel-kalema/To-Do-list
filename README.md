@@ -5,7 +5,7 @@
 ## Built With
 
 - Html
-- Csss
+- css
 - Js
 - webpack
 - npm
